@@ -19,7 +19,7 @@ import org.springframework.data.annotation.Transient;
 @Entity
 public class User {
 
-private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 6833167247955613395L;
 	
 	@Id
 	@GeneratedValue(strategy =GenerationType.AUTO, generator="native")
@@ -50,6 +50,15 @@ private static final long serialVersionUID = 1L;
 
 	public User(Long id) {
 	
+		this.id = id;
+	}
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 
